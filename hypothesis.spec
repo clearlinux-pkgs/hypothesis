@@ -4,12 +4,12 @@
 #
 Name     : hypothesis
 Version  : 1.11.3
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/source/h/hypothesis/hypothesis-1.11.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/h/hypothesis/hypothesis-1.11.3.tar.gz
 Summary  : A library for property based testing
 Group    : Development/Tools
-License  : MPL-2
+License  : MPL-2.0
 Requires: hypothesis-python
 BuildRequires : pbr
 BuildRequires : pip
