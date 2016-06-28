@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 3.1.0
-Release  : 9
+Release  : 10
 URL      : https://pypi.python.org/packages/source/h/hypothesis/hypothesis-3.1.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/h/hypothesis/hypothesis-3.1.0.tar.gz
 Summary  : A library for property based testing
