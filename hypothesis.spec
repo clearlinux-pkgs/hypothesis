@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 3.8.2
-Release  : 26
+Release  : 27
 URL      : http://pypi.debian.net/hypothesis/hypothesis-3.8.2.tar.gz
 Source0  : http://pypi.debian.net/hypothesis/hypothesis-3.8.2.tar.gz
 Summary  : A library for property based testing
