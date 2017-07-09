@@ -1,5 +1,5 @@
 PKG_NAME := hypothesis
-URL := http://pypi.debian.net/hypothesis/hypothesis-3.11.6.tar.gz
+URL := http://pypi.debian.net/hypothesis/hypothesis-3.12.0.tar.gz
 
 
 include ../common/Makefile.common
