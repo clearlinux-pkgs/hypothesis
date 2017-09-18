@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 3.28.1
-Release  : 52
+Release  : 53
 URL      : http://pypi.debian.net/hypothesis/hypothesis-3.28.1.tar.gz
 Source0  : http://pypi.debian.net/hypothesis/hypothesis-3.28.1.tar.gz
 Summary  : A library for property based testing
@@ -12,10 +12,12 @@ Group    : Development/Tools
 License  : MPL-2.0
 Requires: hypothesis-legacypython
 Requires: hypothesis-python
+Requires: attrs
 Requires: enum34
 Requires: numpy
 Requires: pytest
 Requires: pytz
+BuildRequires : attrs
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
@@ -58,12 +60,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505685072
+export SOURCE_DATE_EPOCH=1505693728
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505685072
+export SOURCE_DATE_EPOCH=1505693728
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
