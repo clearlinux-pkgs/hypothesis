@@ -4,13 +4,14 @@
 #
 Name     : hypothesis
 Version  : 3.30.4
-Release  : 57
+Release  : 58
 URL      : http://pypi.debian.net/hypothesis/hypothesis-3.30.4.tar.gz
 Source0  : http://pypi.debian.net/hypothesis/hypothesis-3.30.4.tar.gz
 Summary  : A library for property based testing
 Group    : Development/Tools
 License  : MPL-2.0
 Requires: hypothesis-legacypython
+Requires: hypothesis-python3
 Requires: hypothesis-python
 Requires: attrs
 Requires: coverage
@@ -40,6 +41,7 @@ Hypothesis
 %package legacypython
 Summary: legacypython components for the hypothesis package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the hypothesis package.
@@ -49,9 +51,19 @@ legacypython components for the hypothesis package.
 Summary: python components for the hypothesis package.
 Group: Default
 Requires: hypothesis-legacypython
+Requires: hypothesis-python3
 
 %description python
 python components for the hypothesis package.
+
+
+%package python3
+Summary: python3 components for the hypothesis package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the hypothesis package.
 
 
 %prep
@@ -62,12 +74,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506528422
+export SOURCE_DATE_EPOCH=1507155091
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1506528422
+export SOURCE_DATE_EPOCH=1507155091
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -83,5 +95,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
