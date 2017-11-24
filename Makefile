@@ -1,5 +1,5 @@
 PKG_NAME := hypothesis
-URL = https://pypi.python.org/packages/d5/4c/da7cb7d412731599c42e902f7a05fe1c5a0a06c3f9159f074e1beb947b99/hypothesis-3.38.4.tar.gz
+URL = https://pypi.python.org/packages/10/49/123bcfd15e074ef615642b509db1ea3cf047d4f03daff6488beb60d99163/hypothesis-3.38.5.tar.gz
 
 
 include ../common/Makefile.common
