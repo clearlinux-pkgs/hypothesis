@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 3.77.0
-Release  : 184
+Release  : 185
 URL      : https://files.pythonhosted.org/packages/17/30/3d44035b4a27cc058114220db48540d20eb4fe41c8d4c72714ea5db27467/hypothesis-3.77.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/17/30/3d44035b4a27cc058114220db48540d20eb4fe41c8d4c72714ea5db27467/hypothesis-3.77.0.tar.gz
 Summary  : A library for property based testing
@@ -70,12 +70,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539697259
+export SOURCE_DATE_EPOCH=1539700681
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1539697259
+export SOURCE_DATE_EPOCH=1539700681
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
