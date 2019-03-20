@@ -1,5 +1,5 @@
 PKG_NAME := hypothesis
-URL = https://files.pythonhosted.org/packages/a5/04/9cf2782fdd602ad13e601074934036ef9f6cad33aff0ba402a754489d3af/hypothesis-4.13.0.tar.gz
+URL = https://files.pythonhosted.org/packages/35/ca/df13104e84ef7edddfa4fc237a66597379486f8703c939de5d0265790b8f/hypothesis-4.14.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
