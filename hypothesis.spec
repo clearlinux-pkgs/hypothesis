@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 4.14.2
-Release  : 273
+Release  : 274
 URL      : https://files.pythonhosted.org/packages/82/5b/f46e7251a2077ef9a3d079a19997effcbd02b62424561b17ceead3400d3e/hypothesis-4.14.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/82/5b/f46e7251a2077ef9a3d079a19997effcbd02b62424561b17ceead3400d3e/hypothesis-4.14.2.tar.gz
 Summary  : A library for property based testing
@@ -21,7 +21,6 @@ Requires: pandas
 Requires: python-dateutil
 Requires: pytz
 BuildRequires : attrs
-BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
@@ -34,15 +33,6 @@ Hypothesis is an advanced testing library for Python. It lets you write tests wh
 are parametrized by a source of examples, and then generates simple and comprehensible
 examples that make your tests fail. This lets you find more bugs in your code with less
 work.
-
-%package legacypython
-Summary: legacypython components for the hypothesis package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the hypothesis package.
-
 
 %package python
 Summary: python components for the hypothesis package.
@@ -70,25 +60,20 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554053372
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554320667
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %install
-export SOURCE_DATE_EPOCH=1554053372
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
