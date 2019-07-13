@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 4.28.1
-Release  : 316
+Release  : 317
 URL      : https://files.pythonhosted.org/packages/d7/e7/0eabd00a1a2f88a93d9a789dd102ec798fd01904479fcebb02fa3b615c6f/hypothesis-4.28.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/e7/0eabd00a1a2f88a93d9a789dd102ec798fd01904479fcebb02fa3b615c6f/hypothesis-4.28.1.tar.gz
 Summary  : A library for property based testing
