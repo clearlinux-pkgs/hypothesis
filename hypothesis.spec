@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 4.40.0
-Release  : 337
+Release  : 338
 URL      : https://files.pythonhosted.org/packages/3c/2a/c1ee17d52c6ba6d7ba37b85acdd2982449782cf6052b556b67269ac8b03f/hypothesis-4.40.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3c/2a/c1ee17d52c6ba6d7ba37b85acdd2982449782cf6052b556b67269ac8b03f/hypothesis-4.40.0.tar.gz
 Summary  : A library for property based testing
@@ -16,7 +16,6 @@ Requires: hypothesis-python3 = %{version}-%{release}
 Requires: Django
 Requires: attrs
 Requires: dpcontracts
-Requires: enum34
 Requires: lark-parser
 Requires: numpy
 Requires: pandas
@@ -26,7 +25,6 @@ BuildRequires : Django
 BuildRequires : attrs
 BuildRequires : buildreq-distutils3
 BuildRequires : dpcontracts
-BuildRequires : enum34
 BuildRequires : lark-parser
 BuildRequires : numpy
 BuildRequires : pandas
@@ -36,13 +34,15 @@ BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 
 %description
-==========
 Hypothesis
-==========
-Hypothesis is an advanced testing library for Python. It lets you write tests which
-are parametrized by a source of examples, and then generates simple and comprehensible
-examples that make your tests fail. This lets you find more bugs in your code with less
-work.
+        ==========
+        
+        Hypothesis is an advanced testing library for Python. It lets you write tests which
+        are parametrized by a source of examples, and then generates simple and comprehensible
+        examples that make your tests fail. This lets you find more bugs in your code with less
+        work.
+        
+        e.g.
 
 %package license
 Summary: license components for the hypothesis package.
@@ -78,8 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570735035
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1571084765
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -95,7 +94,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/hypothesis
-cp LICENSE.txt %{buildroot}/usr/share/package-licenses/hypothesis/LICENSE.txt
+cp %{_builddir}/hypothesis-4.40.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/hypothesis/cbc4c246c44ed63fb158856a846c0962ae22668d
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -106,7 +105,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/hypothesis/LICENSE.txt
+/usr/share/package-licenses/hypothesis/cbc4c246c44ed63fb158856a846c0962ae22668d
 
 %files python
 %defattr(-,root,root,-)
