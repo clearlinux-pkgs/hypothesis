@@ -2,5 +2,4 @@
 # picked up automatically. One name per line, no whitespace.
 uncompyle6
 attrs
-setuptools-python
-setuptools-legacypython
+

@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 4.40.0
-Release  : 338
+Release  : 339
 URL      : https://files.pythonhosted.org/packages/3c/2a/c1ee17d52c6ba6d7ba37b85acdd2982449782cf6052b556b67269ac8b03f/hypothesis-4.40.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3c/2a/c1ee17d52c6ba6d7ba37b85acdd2982449782cf6052b556b67269ac8b03f/hypothesis-4.40.0.tar.gz
 Summary  : A library for property based testing
@@ -30,8 +30,6 @@ BuildRequires : numpy
 BuildRequires : pandas
 BuildRequires : python-dateutil
 BuildRequires : pytz
-BuildRequires : setuptools-legacypython
-BuildRequires : setuptools-python
 
 %description
 Hypothesis
@@ -78,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571084765
+export SOURCE_DATE_EPOCH=1571089839
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
