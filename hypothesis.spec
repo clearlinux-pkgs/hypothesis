@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 4.56.3
-Release  : 376
+Release  : 377
 URL      : https://files.pythonhosted.org/packages/32/18/40f50a3e60479e7552546cf1b8920b13831bcb899344566f671328b44446/hypothesis-4.56.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/32/18/40f50a3e60479e7552546cf1b8920b13831bcb899344566f671328b44446/hypothesis-4.56.3.tar.gz
 Summary  : A library for property-based testing
@@ -34,13 +34,10 @@ BuildRequires : pytz
 BuildRequires : sortedcontainers
 
 %description
-==========
-Hypothesis
-==========
-Hypothesis is an advanced testing library for Python. It lets you write tests which
-are parametrized by a source of examples, and then generates simple and comprehensible
-examples that make your tests fail. This lets you find more bugs in your code with less
-work.
+Hypothesis is an advanced testing library for Python. It lets you write tests
+which are parametrized by a source of examples, and then generates simple and
+comprehensible examples that make your tests fail. This lets you find more bugs
+in your code with less work.
 
 %package license
 Summary: license components for the hypothesis package.
@@ -77,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1577137547
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1578076166
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
