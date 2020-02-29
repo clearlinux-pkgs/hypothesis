@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 5.5.4
-Release  : 391
+Release  : 392
 URL      : https://files.pythonhosted.org/packages/72/01/0f12f7992240f9d676bf8f31aa7ac898325c34d455c876a726329d548f65/hypothesis-5.5.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/72/01/0f12f7992240f9d676bf8f31aa7ac898325c34d455c876a726329d548f65/hypothesis-5.5.4.tar.gz
 Summary  : A library for property-based testing
@@ -60,6 +60,7 @@ python components for the hypothesis package.
 Summary: python3 components for the hypothesis package.
 Group: Default
 Requires: python3-core
+Provides: pypi(hypothesis)
 
 %description python3
 python3 components for the hypothesis package.
@@ -74,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581989643
+export SOURCE_DATE_EPOCH=1582936633
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
