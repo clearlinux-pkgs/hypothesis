@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 5.18.2
-Release  : 416
+Release  : 417
 URL      : https://files.pythonhosted.org/packages/64/0f/5eef982948faab1c8dbac8dabc57ac6a20434aaa9d9a92222625661ce49a/hypothesis-5.18.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/64/0f/5eef982948faab1c8dbac8dabc57ac6a20434aaa9d9a92222625661ce49a/hypothesis-5.18.2.tar.gz
 Summary  : A library for property-based testing
@@ -60,6 +60,9 @@ python components for the hypothesis package.
 Summary: python3 components for the hypothesis package.
 Group: Default
 Requires: python3-core
+Provides: pypi(hypothesis)
+Requires: pypi(attrs)
+Requires: pypi(sortedcontainers)
 
 %description python3
 python3 components for the hypothesis package.
@@ -74,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593187669
+export SOURCE_DATE_EPOCH=1593191970
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
