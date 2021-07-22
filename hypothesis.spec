@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 6.14.3
-Release  : 524
+Release  : 525
 URL      : https://files.pythonhosted.org/packages/97/56/3bf2751661ce17b7e917ed1c5ffeada93ed00c67e3edba7f8d41b6a48756/hypothesis-6.14.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/97/56/3bf2751661ce17b7e917ed1c5ffeada93ed00c67e3edba7f8d41b6a48756/hypothesis-6.14.3.tar.gz
 Summary  : A library for property-based testing
