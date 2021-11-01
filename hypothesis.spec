@@ -4,7 +4,7 @@
 #
 Name     : hypothesis
 Version  : 6.24.0
-Release  : 555
+Release  : 556
 URL      : https://files.pythonhosted.org/packages/9a/e2/fc1f0a0e148d247f58ab63876d3c1304e89264eb23b6e074af45fafdc353/hypothesis-6.24.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/9a/e2/fc1f0a0e148d247f58ab63876d3c1304e89264eb23b6e074af45fafdc353/hypothesis-6.24.0.tar.gz
 Summary  : A library for property-based testing
@@ -99,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635115546
+export SOURCE_DATE_EPOCH=1635740538
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
